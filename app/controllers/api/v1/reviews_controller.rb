@@ -1,48 +1,49 @@
+# frozen_string_literal: true
 
 module Api
-    module V1
-      class ReviewsController < ApplicationController
-        protect_from_forgery with: :null_session
-  
-        # POST /api/v1/reviews
-        def create
-          review = Review.new(review_params)
-  
-          if review.save
-            render json: serializer(review)
-          else
-            render json: errors(review), status: 422
-          end
+  module V1
+    class ReviewsController < ApplicationController
+      protect_from_forgery with: :null_session
+
+      # POST /api/v1/reviews
+      def create
+        review = Review.new(review_params)
+
+        if review.save
+          render json: serializer(review)
+        else
+          render json: errors(review), status: 422
         end
-  
-        # DELETE /api/v1/reviews/:id
-        def destroy
-          review = Review.find(params[:id])
-  
-          if review.destroy
-            head :no_content
-          else
-            render json: errors(review), status: 422
-          end
+      end
+
+      # DELETE /api/v1/reviews/:id
+      def destroy
+        review = Review.find(params[:id])
+
+        if review.destroy
+          head :no_content
+        else
+          render json: errors(review), status: 422
         end
-  
-        private
-  
-        # Strong params
-        def review_params
-          params.require(:review).permit(:title, :description, :score, :airline_id)
-        end
-  
-        # fast_jsonapi serializer
-        def serializer(review, options = {})
-          ReviewSerializer
-            .new(review)
-            .serializable_hash
-        end
-  
-        def errors(record)
-          { errors: record.errors.messages }
-        end
+      end
+
+      private
+
+      # Strong params
+      def review_params
+        params.require(:review).permit(:title, :description, :score, :airline_id)
+      end
+
+      # fast_jsonapi serializer
+      def serializer(review, _options = {})
+        ReviewSerializer
+          .new(review)
+          .serializable_hash
+      end
+
+      def errors(record)
+        { errors: record.errors.messages }
       end
     end
   end
+end
