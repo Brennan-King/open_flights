@@ -10,7 +10,7 @@ module Api
         review = Review.new(review_params)
 
         if review.save
-          render json: serializer(review)
+          render json: review, serializer: ReviewSerializer
         else
           render json: errors(review), status: 422
         end
@@ -32,13 +32,6 @@ module Api
       # Strong params
       def review_params
         params.require(:review).permit(:title, :description, :score, :airline_id)
-      end
-
-      # fast_jsonapi serializer
-      def serializer(review, _options = {})
-        ReviewSerializer
-          .new(review)
-          .serializable_hash
       end
 
       def errors(record)

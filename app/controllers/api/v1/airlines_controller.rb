@@ -7,20 +7,21 @@ module Api
 
       # GET /api/v1/airlines
       def index
-        render json: serializer(airlines, options)
+        airlines = Airline.all
+        render json: airlines, each_serializer: AirlineSerializer
       end
 
       # GET /api/v1/airlines/:slug
       def show
-        render json: serializer(airline, options)
+        airline = Airline.find_by(slug: params[:slug])
+        render json: airline, serializer: AirlineSerializer
       end
 
       # POST /api/v1/airlines
       def create
         airline = Airline.new(airline_params)
-
         if airline.save
-          render json: serializer(airline)
+          render json: airline, serializer: AirlineSerializer
         else
           render json: errors(airline), status: 422
         end
@@ -29,9 +30,8 @@ module Api
       # PATCH /api/v1/airlines/:slug
       def update
         airline = Airline.find_by(slug: params[:slug])
-
         if airline.update(airline_params)
-          render json: serializer(airline, options)
+          render json: airline, serializer: AirlineSerializer
         else
           render json: errors(airline), status: 422
         end
@@ -39,6 +39,7 @@ module Api
 
       # DELETE /api/v1/airlines/:slug
       def destroy
+        airline = Airline.find_by(slug: params[:slug])
         if airline.destroy
           head :no_content
         else
@@ -48,31 +49,9 @@ module Api
 
       private
 
-      # Used For compound documents with fast_jsonapi
-      def options
-        @options ||= { include: %i[reviews] }
-      end
-
-      # Get all airlines
-      def airlines
-        @airlines ||= Airline.all
-      end
-
-      # Get a specific airline
-      def airline
-        @airline ||= Airline.find_by(slug: params[:slug])
-      end
-
       # Strong params
       def airline_params
         params.require(:airline).permit(:name, :image_url)
-      end
-
-      # fast_jsonapi serializer
-      def serializer(records, options = {})
-        AirlineSerializer
-          .new(records, options)
-          .serializable_hash
       end
 
       # Errors
