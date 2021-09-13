@@ -48,6 +48,7 @@ group :development do
   gem 'rubocop', require: false
   # Intellisense and code completion
   gem 'solargraph'
+  gem 'listen'
 end
 
 group :test do
