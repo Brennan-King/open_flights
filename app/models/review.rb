@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 class Review < ApplicationRecord
-  belongs_to :airline
+  belongs_to :airline, dependent: :destroy
+  validates_presence_of :title
+  validates_presence_of :description
+  validates_presence_of :score
+  validates_inclusion_of :score, in: 1..5
 end
