@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import AirlineHeader from './AirlineHeader';
+import ReviewForm from './ReviewForm';
 import './Airline.scss';
 
 /**
@@ -10,7 +11,8 @@ import './Airline.scss';
  */
 const Airline = (props) => {
   const [airline, setAirline] = useState({});
-  const [review, setReview] = useState({});
+  const [reviewFormInput, setReviewFormInput] = useState({});
+  const [reviewFormRatingSelection, setReviewFormRatingSelection] = useState();
 
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
@@ -20,6 +22,28 @@ const Airline = (props) => {
     axios.get(airlinesEndpoint).then( (response) => setAirline(response.data))
         .catch( (response) => console.log(response));
   }, []);
+
+  const onReviewFormInputChange = (event) => {
+    event.preventDefault();
+    setReviewFormInput(Object.assign({}, reviewFormInput,
+        {[event.target.name]: event.target.value}));
+  };
+
+  const onReviewFormSubmit = (event) => {
+    event.preventDefault();
+
+    const csrfToken = document.querySelector('[name=csrf-token]').content;
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
+
+    const review = {
+      title: reviewFormInput.title,
+      description: reviewFormInput.description,
+      score: reviewFormRatingSelection,
+      airline_id: airline.id,
+    };
+
+    axios.post('/api/v1/reviews', {review});
+  };
 
   return (
     <div className="airline-container">
@@ -32,7 +56,14 @@ const Airline = (props) => {
         </div>
       </div>
       <div className="airline-column">
-        <div className="airline-review-form">[Review Form Goes Here.]</div>
+        <div className="airline-review-form">
+          <ReviewForm
+            onReviewFormInputChange={onReviewFormInputChange}
+            onReviewFormSubmit={onReviewFormSubmit}
+            setReviewFormRating={setReviewFormRatingSelection}
+            airlineAttributes={airline}
+          />
+        </div>
       </div>
     </div>
   );
