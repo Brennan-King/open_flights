@@ -24,11 +24,10 @@ const Airlines = () => {
 
   const getAirlinesGrid = () => {
     if (airlines) {
-      return airlines.map((airline) => {
+      return airlines.map((airline, index) => {
         return (
-          <div key={airline.name}>
+          <div key={index}>
             <AirlineGridItem
-              key={airline.name}
               imageUrl={airline.image_url}
               name={airline.name}
               avgScore={airline.avg_score}
