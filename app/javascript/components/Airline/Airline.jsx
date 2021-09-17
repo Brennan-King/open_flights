@@ -2,11 +2,12 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import AirlineHeader from './AirlineHeader';
 import ReviewForm from './ReviewForm';
+import Review from './Review';
 import './Airline.scss';
 
 /**
  * Constructs an airline component used to display a specific airline.
- * @param {object} props the props used to configure the AirlineGridItem
+ * @param {object} props the props used to configure the airline
  * @return {node} a div containing the configured airline
  */
 const Airline = (props) => {
@@ -21,7 +22,7 @@ const Airline = (props) => {
 
     axios.get(airlinesEndpoint).then( (response) => setAirline(response.data))
         .catch( (response) => console.log(response));
-  }, []);
+  }, [reviewFormRatingSelection]);
 
   const onReviewFormInputChange = (event) => {
     event.preventDefault();
@@ -43,6 +44,25 @@ const Airline = (props) => {
     };
 
     axios.post('/api/v1/reviews', {review});
+    setReviewFormRatingSelection(0);
+  };
+
+  const getAirlineReviews = () => {
+    let airlineReviews;
+    if (airline.reviews) {
+      airlineReviews = airline.reviews.map((airlineReview, index) => {
+        return (
+          <Review
+            key={index}
+            reviewTitle={airlineReview.title}
+            reviewDescription={airlineReview.description}
+            reviewScore={airlineReview.score}
+          />
+        );
+      });
+    }
+
+    return airlineReviews;
   };
 
   return (
@@ -52,11 +72,11 @@ const Airline = (props) => {
           {
             !!airline && <AirlineHeader airlineAttributes={airline}/>
           }
-          <div className="airline-reviews"></div>
+          {getAirlineReviews()}
         </div>
       </div>
       <div className="airline-column">
-        <div className="airline-review-form">
+        <div>
           <ReviewForm
             onReviewFormInputChange={onReviewFormInputChange}
             onReviewFormSubmit={onReviewFormSubmit}

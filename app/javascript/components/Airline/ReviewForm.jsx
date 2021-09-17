@@ -36,8 +36,6 @@ const ReviewForm = (props) => {
   const [selection, setSelection] = useState(undefined);
 
   const airlineName = airlineAttributes.name;
-  const airlineImageUrl = airlineAttributes.image_url;
-  const airlineAverageScore = airlineAttributes.avg_score;
   const airlineFormText = `Have and experience ` +
   ` with ${airlineName}? Share your review!`;
   const airlineFormStarRatingText = 'Rate This Airline';

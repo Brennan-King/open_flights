@@ -1,0 +1,23 @@
+.airline-rating-wrapper {
+  display: flex;
+}
+
+.airline-rating-filled-in {
+  height: 25px;
+  width: 25px;
+  background-color: #fcc201;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  box-shadow: 4px 4px 4px grey;
+}
+
+.airline-rating-not-filled-in {
+  height: 25px;
+  width: 25px;
+  background-color: lightgray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  box-shadow: 4px 4px 4px grey;
+}
