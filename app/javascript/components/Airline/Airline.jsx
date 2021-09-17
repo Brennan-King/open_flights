@@ -14,6 +14,7 @@ const Airline = (props) => {
   const [airline, setAirline] = useState({});
   const [reviewFormInput, setReviewFormInput] = useState({});
   const [reviewFormRatingSelection, setReviewFormRatingSelection] = useState();
+  const [deleteButtonClicked, setDeleteButtonClicked] = useState(false);
 
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
@@ -22,7 +23,8 @@ const Airline = (props) => {
 
     axios.get(airlinesEndpoint).then( (response) => setAirline(response.data))
         .catch( (response) => console.log(response));
-  }, [reviewFormRatingSelection]);
+    setDeleteButtonClicked(false);
+  }, [reviewFormRatingSelection, deleteButtonClicked]);
 
   const onReviewFormInputChange = (event) => {
     event.preventDefault();
@@ -57,6 +59,8 @@ const Airline = (props) => {
             reviewTitle={airlineReview.title}
             reviewDescription={airlineReview.description}
             reviewScore={airlineReview.score}
+            reviewId={airlineReview.id}
+            setDeleteButtonClicked={setDeleteButtonClicked}
           />
         );
       });
