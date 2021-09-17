@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AirlineRating from '../AirlineRating/AirlineRating';
+import DeleteReviewButton from './DeleteReviewButton';
 import './Review.scss';
 
 const propTypes = {
@@ -10,12 +11,18 @@ const propTypes = {
   reviewDescription: PropTypes.string,
   /** The score of the review */
   reviewScore: PropTypes.number,
+  /** The id of the review */
+  reviewId: PropTypes.number,
+  /** Callback function to set delete button state */
+  setDeleteButtonClicked: PropTypes.func,
 };
 
 const propDefaults = {
   reviewTitle: '',
   reviewDescription: '',
-  reviewScore: '',
+  reviewScore: 0,
+  reviewId: 0,
+  setDeleteButtonClicked: () => {},
 };
 
 /**
@@ -24,13 +31,22 @@ const propDefaults = {
  * @return {node} a div containing the configured review
  */
 const Review = (props) => {
-  const {reviewTitle, reviewDescription, reviewScore} = props;
+  const {reviewTitle,
+    reviewDescription,
+    reviewScore,
+    reviewId,
+    setDeleteButtonClicked,
+  } = props;
 
   return (
     <div className="review-card">
       <div className="review-rating-container">
         <AirlineRating
           reviewScore={reviewScore}
+        />
+        <DeleteReviewButton
+          reviewId={reviewId}
+          setDeleteButtonClicked={setDeleteButtonClicked}
         />
       </div>
       <div className="review-title">{reviewTitle}</div>
