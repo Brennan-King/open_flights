@@ -9,7 +9,7 @@ const AIRLINES_SUB_HEADER = 'Honest, unbiased airlines reviews';
 
 /**
  * Constructs a component used to display a grid of airlines.
- * @return {node} a div containing the configured Airlines component
+ * @return {node} a div containing the configured airlines component
  */
 const Airlines = () => {
   const [airlines, setAirlines] = useState([]);

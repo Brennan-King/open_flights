@@ -1,6 +1,7 @@
 .airline-header-container {
   padding: 50px 100px 50px 0;
   font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .airline-header-image {
@@ -12,12 +13,13 @@
   margin-right: 5px;
 }
 
-.airline-star-rating {
-
+.airline-total-reviews {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .airline-rating-out-of-five {
   font-size: 18px;
   font-weight: bold;
   padding: 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

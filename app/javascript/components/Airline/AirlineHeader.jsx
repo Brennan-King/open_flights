@@ -22,7 +22,10 @@ const AirlineHeader = (props) => {
   const airlineName = airlineAttributes.name;
   const airlineImageUrl = airlineAttributes.image_url;
   const airlineAverageScore = airlineAttributes.avg_score;
-  const airlineRatingOutOfFive = `${airlineAverageScore} out of 5`;
+  const totalAirlineReviews = airlineAttributes.reviews ?
+    airlineAttributes.reviews.length : 0;
+  const totalAirlineReviewsText = `${totalAirlineReviews} user reviews`;
+  const airlineRatingOutOfFiveText = `${airlineAverageScore} out of 5`;
 
   return (
     <div className="airline-header-container">
@@ -34,9 +37,11 @@ const AirlineHeader = (props) => {
         {airlineName}
       </h1>
       <div>
-        <div className="airline-star-rating"></div>
+        <div className="airline-total-reviews">
+          {airlineRatingOutOfFiveText}
+        </div>
         <div className="airline-rating-out-of-five">
-          {airlineRatingOutOfFive}
+          {totalAirlineReviewsText}
         </div>
       </div>
     </div>

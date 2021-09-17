@@ -26,11 +26,13 @@ const propDefaults = {
 
 /**
  * Constructs an airline grid item to be placed within a grid.
- * @param {object} props the props used to configure the AirlineGridItem
+ * @param {object} props the props used to configure the airline grid item
  * @return {node} a div containing the configured AirglinGridItem
  */
 const AirlineGridItem = (props) => {
   const {imageUrl, name, avgScore, slug} = props;
+
+  const airlineAverageScoreText = `Average Rating: ${avgScore}`;
 
   return (
     <div className="airline-grid-item-card">
@@ -38,7 +40,7 @@ const AirlineGridItem = (props) => {
         <img className='airline-grid-item-logo' src={imageUrl} alt={name} />
       </div>
       <div className="airline-grid-item-name">{name}</div>
-      <div className="airline-score">{avgScore}</div>
+      <div className="airline-score">{airlineAverageScoreText}</div>
       <div className="airline-grid-item-link-container">
         <Link className="airline-grid-item-link" to={`/airlines/${slug}`}>
           {AIRLINE_GRID_ITEM_BUTTON_TEXT}
