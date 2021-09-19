@@ -1,9 +1,10 @@
 .airline-grid-item-card {
-  border: 4px solid #efefef;
+  border: 2px solid #000;
   border-radius: 5px;
-  background: lightblue;
+  background: #3796cb;
   text-align: center;
   box-shadow: 10px 10px 5px grey;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .airline-grid-item-logo-container {
@@ -18,7 +19,7 @@
   height: 50px;
   width: 50px;
   border-radius: 100%;
-  border: 1px solid #efefef
+  border: 1px solid #000
 }
 
 .airline-grid-item-name {
