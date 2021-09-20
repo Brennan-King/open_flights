@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airlines should render an Airlines component when the service successfully returns data 1`] = `null`;
+
+exports[`Airlines should render an Airlines component when the service unsuccessfully returns data 1`] = `
+<Airlines>
+  <div
+    className="airlines-container"
+  >
+    <div
+      className="airlines-header"
+    >
+      Open Flights
+    </div>
+    <div
+      className="airlines-sub-header"
+    >
+      Honest, unbiased airlines reviews
+    </div>
+    <div
+      className="airlines-grid"
+    />
+  </div>
+</Airlines>
+`;

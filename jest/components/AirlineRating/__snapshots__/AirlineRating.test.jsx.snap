@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirlineRating should render an AirlineRating component with a five star review 1`] = `
+<AirlineRating
+  reviewScore={5}
+>
+  <span
+    className="airline-rating-wrapper"
+  >
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+  </span>
+</AirlineRating>
+`;
+
+exports[`AirlineRating should render an AirlineRating component with a three star review 1`] = `
+<AirlineRating
+  reviewScore={3}
+>
+  <span
+    className="airline-rating-wrapper"
+  >
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+  </span>
+</AirlineRating>
+`;
+
+exports[`AirlineRating should render an AirlineRating component with default props 1`] = `
+<AirlineRating
+  reviewScore={0}
+>
+  <span
+    className="airline-rating-wrapper"
+  >
+    <div
+      className="airline-rating-not-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+    <div
+      className="airline-rating-not-filled-in"
+    />
+  </span>
+</AirlineRating>
+`;

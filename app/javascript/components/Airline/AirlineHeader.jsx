@@ -8,7 +8,12 @@ const propTypes = {
 };
 
 const propDefaults = {
-  airlineAttributes: {},
+  airlineAttributes: {
+    name: '',
+    image_url: '',
+    avg_score: 0,
+    reviews: [],
+  },
 };
 
 /**
@@ -48,6 +53,6 @@ const AirlineHeader = (props) => {
   );
 };
 
-AirlineHeader.propDefaults = propDefaults;
+AirlineHeader.defaultProps = propDefaults;
 AirlineHeader.propTypes = propTypes;
 export default AirlineHeader;

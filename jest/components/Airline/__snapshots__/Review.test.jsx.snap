@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review should render a Review component 1`] = `
+<Review
+  reviewDescription="testReviewDescription"
+  reviewId={1}
+  reviewScore={5}
+  reviewTitle="testReviewTitle"
+  setDeleteButtonClicked={[Function]}
+>
+  <div
+    className="review-card"
+  >
+    <div
+      className="review-rating-container"
+    >
+      <img
+        alt="reviewIcon"
+        className="review-icon"
+        src="test-file-stub"
+      />
+      <AirlineRating
+        reviewScore={5}
+      >
+        <span
+          className="airline-rating-wrapper"
+        >
+          <div
+            className="airline-rating-filled-in"
+          />
+          <div
+            className="airline-rating-filled-in"
+          />
+          <div
+            className="airline-rating-filled-in"
+          />
+          <div
+            className="airline-rating-filled-in"
+          />
+          <div
+            className="airline-rating-filled-in"
+          />
+        </span>
+      </AirlineRating>
+      <DeleteReviewButton
+        reviewId={1}
+        setDeleteButtonClicked={[Function]}
+      >
+        <div
+          className="delete-review-button"
+          id="delete-review-button"
+          onClick={[Function]}
+        >
+          <div
+            className="x-symbol"
+          >
+            x
+          </div>
+        </div>
+      </DeleteReviewButton>
+    </div>
+    <div
+      className="review-title"
+    >
+      testReviewTitle
+    </div>
+    <div
+      className="review-description"
+    >
+      testReviewDescription
+    </div>
+  </div>
+</Review>
+`;
+
+exports[`Review should render a Review component with default props 1`] = `
+<Review
+  reviewDescription=""
+  reviewId={0}
+  reviewScore={0}
+  reviewTitle=""
+  setDeleteButtonClicked={[Function]}
+>
+  <div
+    className="review-card"
+  >
+    <div
+      className="review-rating-container"
+    >
+      <img
+        alt="reviewIcon"
+        className="review-icon"
+        src="test-file-stub"
+      />
+      <AirlineRating
+        reviewScore={0}
+      >
+        <span
+          className="airline-rating-wrapper"
+        >
+          <div
+            className="airline-rating-not-filled-in"
+          />
+          <div
+            className="airline-rating-not-filled-in"
+          />
+          <div
+            className="airline-rating-not-filled-in"
+          />
+          <div
+            className="airline-rating-not-filled-in"
+          />
+          <div
+            className="airline-rating-not-filled-in"
+          />
+        </span>
+      </AirlineRating>
+      <DeleteReviewButton
+        reviewId={0}
+        setDeleteButtonClicked={[Function]}
+      >
+        <div
+          className="delete-review-button"
+          id="delete-review-button"
+          onClick={[Function]}
+        >
+          <div
+            className="x-symbol"
+          >
+            x
+          </div>
+        </div>
+      </DeleteReviewButton>
+    </div>
+    <div
+      className="review-title"
+    />
+    <div
+      className="review-description"
+    />
+  </div>
+</Review>
+`;

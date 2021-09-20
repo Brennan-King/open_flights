@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar should render a NavigationBar component 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "blank",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <NavigationBar>
+    <div
+      className="navigation-bar-container"
+    >
+      <div
+        className="navigation-bar-open-flights-text"
+      >
+        Open Flights
+      </div>
+      <img
+        alt="airplane"
+        className="navigation-bar-airplane-image"
+        src="test-file-stub"
+      />
+      <div
+        className="link-container"
+      >
+        <Link
+          className="home-link"
+          to="/"
+        >
+          <LinkAnchor
+            className="home-link"
+            href="/"
+            navigate={[Function]}
+          >
+            <a
+              className="home-link"
+              href="/"
+              onClick={[Function]}
+            >
+              Home
+            </a>
+          </LinkAnchor>
+        </Link>
+        <Link
+          className="about-us-link"
+          to="/about-us"
+        >
+          <LinkAnchor
+            className="about-us-link"
+            href="/about-us"
+            navigate={[Function]}
+          >
+            <a
+              className="about-us-link"
+              href="/about-us"
+              onClick={[Function]}
+            >
+              About Us
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+    </div>
+  </NavigationBar>
+</Router>
+`;

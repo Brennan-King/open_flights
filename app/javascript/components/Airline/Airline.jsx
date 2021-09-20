@@ -35,7 +35,10 @@ const Airline = (props) => {
   const onReviewFormSubmit = (event) => {
     event.preventDefault();
 
-    const csrfToken = document.querySelector('[name=csrf-token]').content;
+    let csrfToken = {};
+    if (document.querySelector('[name=csrf-token]')) {
+      csrfToken = document.querySelector('[name=csrf-token]').content;
+    }
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
     const review = {

@@ -32,7 +32,8 @@ const propDefaults = {
  * @return {node} a div containing the configured review
  */
 const Review = (props) => {
-  const {reviewTitle,
+  const {
+    reviewTitle,
     reviewDescription,
     reviewScore,
     reviewId,
@@ -62,5 +63,5 @@ const Review = (props) => {
 };
 
 Review.propTypes = propTypes;
-Review.propDefaults = propDefaults;
+Review.defaultProps = propDefaults;
 export default Review;

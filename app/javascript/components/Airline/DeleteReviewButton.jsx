@@ -24,7 +24,10 @@ const DeleteReviewButton = (props) => {
   const {reviewId, setDeleteButtonClicked} = props;
 
   const onDeleteReviewButtonClick = () => {
-    const csrfToken = document.querySelector('[name=csrf-token]').content;
+    let csrfToken = {};
+    if (document.querySelector('[name=csrf-token]')) {
+      csrfToken = document.querySelector('[name=csrf-token]').content;
+    }
     axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken;
 
     axios.delete(`/api/v1/reviews/${reviewId}`);
@@ -35,6 +38,7 @@ const DeleteReviewButton = (props) => {
     <div
       className="delete-review-button"
       onClick={() => onDeleteReviewButtonClick()}
+      id="delete-review-button"
     >
       <div className="x-symbol">x</div>
     </div>
@@ -42,5 +46,5 @@ const DeleteReviewButton = (props) => {
 };
 
 DeleteReviewButton.propTypes = propTypes;
-DeleteReviewButton.propDefaults = propDefaults;
+DeleteReviewButton.defaultProps = propDefaults;
 export default DeleteReviewButton;

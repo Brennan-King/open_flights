@@ -61,6 +61,7 @@ const ReviewForm = (props) => {
         <label
           className="review-form-rating-options-label"
           onClick={() => onReviewFormRatingSelection(reviewScore)}
+          id="review-form-rating-label"
         />
       </Fragment>
     );
@@ -68,7 +69,7 @@ const ReviewForm = (props) => {
 
   return (
     <div className="review-form-container">
-      <form onSubmit={onReviewFormSubmit}>
+      <form onSubmit={onReviewFormSubmit} id="review-form">
         <div className="review-form-headline">{airlineFormText}</div>
         <div className="review-form-inputs-container">
           <input
@@ -77,6 +78,7 @@ const ReviewForm = (props) => {
             name="title"
             placeholder="Review Title"
             onChange={onReviewFormInputChange}
+            id="review-form-title-input"
           />
         </div>
         <div className="review-form-inputs-container">
@@ -86,6 +88,7 @@ const ReviewForm = (props) => {
             name="description"
             placeholder="Review Description"
             onChange={onReviewFormInputChange}
+            id="review-form-description-input"
           />
         </div>
         <div className="">
@@ -117,5 +120,5 @@ const ReviewForm = (props) => {
 };
 
 ReviewForm.propTypes = propTypes;
-ReviewForm.propDefaults = propDefaults;
+ReviewForm.defaultProps = propDefaults;
 export default ReviewForm;
