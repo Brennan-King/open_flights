@@ -29,7 +29,7 @@ const AirlineHeader = (props) => {
 
   return (
     <div className="airline-header-container">
-      <h1 className="airline-header">
+      <h1>
         <img
           className="airline-header-image"
           src={airlineImageUrl}

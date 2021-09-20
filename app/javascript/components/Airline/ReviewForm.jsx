@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import PropTypes from 'prop-types';
+import reviewFormAirplaneImage from '../../images/reviewFormAirplaneImage.png';
 import './ReviewForm.scss';
 
 const propTypes = {
@@ -103,6 +104,13 @@ const ReviewForm = (props) => {
         >
           {airlineFormButtonText}
         </button>
+        <div className="review-form-airplane-image-container">
+          <img
+            className="review-form-airplane-image"
+            src={reviewFormAirplaneImage}
+            alt="reviewFormAirplaneImage"
+          />
+        </div>
       </form>
     </div>
   );

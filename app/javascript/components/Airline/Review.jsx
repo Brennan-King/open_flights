@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AirlineRating from '../AirlineRating/AirlineRating';
 import DeleteReviewButton from './DeleteReviewButton';
+import reviewIcon from '../../images/reviewIcon.png';
 import './Review.scss';
 
 const propTypes = {
@@ -41,6 +42,11 @@ const Review = (props) => {
   return (
     <div className="review-card">
       <div className="review-rating-container">
+        <img
+          className="review-icon"
+          src={reviewIcon}
+          alt="reviewIcon"
+        />
         <AirlineRating
           reviewScore={reviewScore}
         />
