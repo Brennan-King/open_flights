@@ -1,0 +1,803 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Airline should render an Airline component when the service successfully returns data 1`] = `
+<Airline
+  match={
+    Object {
+      "params": Object {
+        "slug": Object {},
+      },
+    }
+  }
+>
+  <div
+    className="airline-container"
+  >
+    <div
+      className="airline-column"
+    >
+      <div
+        className="airline-header-container"
+      >
+        <AirlineHeader
+          airlineAttributes={
+            Object {
+              "avg_score": 4.5,
+              "id": "123",
+              "image_url": "testAirlineImageUrl",
+              "name": "testAirlineName",
+              "reviews": Array [
+                Object {
+                  "description": "testReviewDescription",
+                  "id": "456",
+                  "score": 3,
+                  "title": "testReviewTitle",
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="airline-header-container"
+          >
+            <h1>
+              <img
+                alt="testAirlineName"
+                className="airline-header-image"
+                src="testAirlineImageUrl"
+              />
+              testAirlineName
+            </h1>
+            <div>
+              <div
+                className="airline-total-reviews"
+              >
+                4.5 out of 5
+              </div>
+              <div
+                className="airline-rating-out-of-five"
+              >
+                1 user reviews
+              </div>
+            </div>
+          </div>
+        </AirlineHeader>
+        <Review
+          key="0"
+          reviewDescription="testReviewDescription"
+          reviewId="456"
+          reviewScore={3}
+          reviewTitle="testReviewTitle"
+          setDeleteButtonClicked={[Function]}
+        >
+          <div
+            className="review-card"
+          >
+            <div
+              className="review-rating-container"
+            >
+              <img
+                alt="reviewIcon"
+                className="review-icon"
+                src="test-file-stub"
+              />
+              <AirlineRating
+                reviewScore={3}
+              >
+                <span
+                  className="airline-rating-wrapper"
+                >
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-not-filled-in"
+                  />
+                  <div
+                    className="airline-rating-not-filled-in"
+                  />
+                </span>
+              </AirlineRating>
+              <DeleteReviewButton
+                reviewId="456"
+                setDeleteButtonClicked={[Function]}
+              >
+                <div
+                  className="delete-review-button"
+                  id="delete-review-button"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="x-symbol"
+                  >
+                    x
+                  </div>
+                </div>
+              </DeleteReviewButton>
+            </div>
+            <div
+              className="review-title"
+            >
+              testReviewTitle
+            </div>
+            <div
+              className="review-description"
+            >
+              testReviewDescription
+            </div>
+          </div>
+        </Review>
+      </div>
+    </div>
+    <div
+      className="airline-column"
+    >
+      <div>
+        <ReviewForm
+          airlineAttributes={
+            Object {
+              "avg_score": 4.5,
+              "id": "123",
+              "image_url": "testAirlineImageUrl",
+              "name": "testAirlineName",
+              "reviews": Array [
+                Object {
+                  "description": "testReviewDescription",
+                  "id": "456",
+                  "score": 3,
+                  "title": "testReviewTitle",
+                },
+              ],
+            }
+          }
+          onReviewFormInputChange={[Function]}
+          onReviewFormSubmit={[Function]}
+          setReviewFormRating={[Function]}
+        >
+          <div
+            className="review-form-container"
+          >
+            <form
+              id="review-form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="review-form-headline"
+              >
+                Have and experience  with testAirlineName? Share your review!
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-title-input"
+                  id="review-form-title-input"
+                  name="title"
+                  onChange={[Function]}
+                  placeholder="Review Title"
+                  type="text"
+                />
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-description-text-area"
+                  id="review-form-description-input"
+                  name="description"
+                  onChange={[Function]}
+                  placeholder="Review Description"
+                  type="text"
+                />
+              </div>
+              <div
+                className=""
+              >
+                <div
+                  className="review-form-rating-container"
+                >
+                  <div
+                    className="review-form-rating-title-text"
+                  >
+                    Rate This Airline
+                  </div>
+                  <div
+                    className="review-form-rating-options"
+                  >
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-5"
+                      name="rating"
+                      type="radio"
+                      value={5}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-4"
+                      name="rating"
+                      type="radio"
+                      value={4}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-3"
+                      name="rating"
+                      type="radio"
+                      value={3}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-2"
+                      name="rating"
+                      type="radio"
+                      value={2}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-1"
+                      name="rating"
+                      type="radio"
+                      value={1}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="review-form-submit-button"
+                type="submit"
+              >
+                Submit Your Review
+              </button>
+              <div
+                className="review-form-airplane-image-container"
+              >
+                <img
+                  alt="reviewFormAirplaneImage"
+                  className="review-form-airplane-image"
+                  src="test-file-stub"
+                />
+              </div>
+            </form>
+          </div>
+        </ReviewForm>
+      </div>
+    </div>
+  </div>
+</Airline>
+`;
+
+exports[`Airline should render an Airline component when the service unsuccessfully returns data 1`] = `
+<Airline
+  match={
+    Object {
+      "params": Object {
+        "slug": Object {},
+      },
+    }
+  }
+>
+  <div
+    className="airline-container"
+  >
+    <div
+      className="airline-column"
+    >
+      <div
+        className="airline-header-container"
+      >
+        <AirlineHeader
+          airlineAttributes={Object {}}
+        >
+          <div
+            className="airline-header-container"
+          >
+            <h1>
+              <img
+                className="airline-header-image"
+              />
+            </h1>
+            <div>
+              <div
+                className="airline-total-reviews"
+              >
+                undefined out of 5
+              </div>
+              <div
+                className="airline-rating-out-of-five"
+              >
+                0 user reviews
+              </div>
+            </div>
+          </div>
+        </AirlineHeader>
+      </div>
+    </div>
+    <div
+      className="airline-column"
+    >
+      <div>
+        <ReviewForm
+          airlineAttributes={Object {}}
+          onReviewFormInputChange={[Function]}
+          onReviewFormSubmit={[Function]}
+          setReviewFormRating={[Function]}
+        >
+          <div
+            className="review-form-container"
+          >
+            <form
+              id="review-form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="review-form-headline"
+              >
+                Have and experience  with undefined? Share your review!
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-title-input"
+                  id="review-form-title-input"
+                  name="title"
+                  onChange={[Function]}
+                  placeholder="Review Title"
+                  type="text"
+                />
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-description-text-area"
+                  id="review-form-description-input"
+                  name="description"
+                  onChange={[Function]}
+                  placeholder="Review Description"
+                  type="text"
+                />
+              </div>
+              <div
+                className=""
+              >
+                <div
+                  className="review-form-rating-container"
+                >
+                  <div
+                    className="review-form-rating-title-text"
+                  >
+                    Rate This Airline
+                  </div>
+                  <div
+                    className="review-form-rating-options"
+                  >
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-5"
+                      name="rating"
+                      type="radio"
+                      value={5}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-4"
+                      name="rating"
+                      type="radio"
+                      value={4}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-3"
+                      name="rating"
+                      type="radio"
+                      value={3}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-2"
+                      name="rating"
+                      type="radio"
+                      value={2}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-1"
+                      name="rating"
+                      type="radio"
+                      value={1}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="review-form-submit-button"
+                type="submit"
+              >
+                Submit Your Review
+              </button>
+              <div
+                className="review-form-airplane-image-container"
+              >
+                <img
+                  alt="reviewFormAirplaneImage"
+                  className="review-form-airplane-image"
+                  src="test-file-stub"
+                />
+              </div>
+            </form>
+          </div>
+        </ReviewForm>
+      </div>
+    </div>
+  </div>
+</Airline>
+`;
+
+exports[`Airline should successfully submit a review 1`] = `
+<Airline
+  match={
+    Object {
+      "params": Object {
+        "slug": Object {},
+      },
+    }
+  }
+>
+  <div
+    className="airline-container"
+  >
+    <div
+      className="airline-column"
+    >
+      <div
+        className="airline-header-container"
+      >
+        <AirlineHeader
+          airlineAttributes={
+            Object {
+              "avg_score": 4.5,
+              "id": "123",
+              "image_url": "testAirlineImageUrl",
+              "name": "testAirlineName",
+              "reviews": Array [
+                Object {
+                  "description": "testReviewDescription",
+                  "id": "456",
+                  "score": 3,
+                  "title": "testReviewTitle",
+                },
+              ],
+            }
+          }
+        >
+          <div
+            className="airline-header-container"
+          >
+            <h1>
+              <img
+                alt="testAirlineName"
+                className="airline-header-image"
+                src="testAirlineImageUrl"
+              />
+              testAirlineName
+            </h1>
+            <div>
+              <div
+                className="airline-total-reviews"
+              >
+                4.5 out of 5
+              </div>
+              <div
+                className="airline-rating-out-of-five"
+              >
+                1 user reviews
+              </div>
+            </div>
+          </div>
+        </AirlineHeader>
+        <Review
+          key="0"
+          reviewDescription="testReviewDescription"
+          reviewId="456"
+          reviewScore={3}
+          reviewTitle="testReviewTitle"
+          setDeleteButtonClicked={[Function]}
+        >
+          <div
+            className="review-card"
+          >
+            <div
+              className="review-rating-container"
+            >
+              <img
+                alt="reviewIcon"
+                className="review-icon"
+                src="test-file-stub"
+              />
+              <AirlineRating
+                reviewScore={3}
+              >
+                <span
+                  className="airline-rating-wrapper"
+                >
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-filled-in"
+                  />
+                  <div
+                    className="airline-rating-not-filled-in"
+                  />
+                  <div
+                    className="airline-rating-not-filled-in"
+                  />
+                </span>
+              </AirlineRating>
+              <DeleteReviewButton
+                reviewId="456"
+                setDeleteButtonClicked={[Function]}
+              >
+                <div
+                  className="delete-review-button"
+                  id="delete-review-button"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="x-symbol"
+                  >
+                    x
+                  </div>
+                </div>
+              </DeleteReviewButton>
+            </div>
+            <div
+              className="review-title"
+            >
+              testReviewTitle
+            </div>
+            <div
+              className="review-description"
+            >
+              testReviewDescription
+            </div>
+          </div>
+        </Review>
+      </div>
+    </div>
+    <div
+      className="airline-column"
+    >
+      <div>
+        <ReviewForm
+          airlineAttributes={
+            Object {
+              "avg_score": 4.5,
+              "id": "123",
+              "image_url": "testAirlineImageUrl",
+              "name": "testAirlineName",
+              "reviews": Array [
+                Object {
+                  "description": "testReviewDescription",
+                  "id": "456",
+                  "score": 3,
+                  "title": "testReviewTitle",
+                },
+              ],
+            }
+          }
+          onReviewFormInputChange={[Function]}
+          onReviewFormSubmit={[Function]}
+          setReviewFormRating={[Function]}
+        >
+          <div
+            className="review-form-container"
+          >
+            <form
+              id="review-form"
+              onSubmit={[Function]}
+            >
+              <div
+                className="review-form-headline"
+              >
+                Have and experience  with testAirlineName? Share your review!
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-title-input"
+                  id="review-form-title-input"
+                  name="title"
+                  onChange={[Function]}
+                  placeholder="Review Title"
+                  type="text"
+                />
+              </div>
+              <div
+                className="review-form-inputs-container"
+              >
+                <input
+                  className="review-form-description-text-area"
+                  id="review-form-description-input"
+                  name="description"
+                  onChange={[Function]}
+                  placeholder="Review Description"
+                  type="text"
+                />
+              </div>
+              <div
+                className=""
+              >
+                <div
+                  className="review-form-rating-container"
+                >
+                  <div
+                    className="review-form-rating-title-text"
+                  >
+                    Rate This Airline
+                  </div>
+                  <div
+                    className="review-form-rating-options"
+                  >
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-5"
+                      name="rating"
+                      type="radio"
+                      value={5}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-4"
+                      name="rating"
+                      type="radio"
+                      value={4}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-3"
+                      name="rating"
+                      type="radio"
+                      value={3}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-2"
+                      name="rating"
+                      type="radio"
+                      value={2}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                    <input
+                      checked={false}
+                      className="review-form-rating-options-input"
+                      id="rating-1"
+                      name="rating"
+                      type="radio"
+                      value={1}
+                    />
+                    <label
+                      className="review-form-rating-options-label"
+                      id="review-form-rating-label"
+                      onClick={[Function]}
+                    />
+                  </div>
+                </div>
+              </div>
+              <button
+                className="review-form-submit-button"
+                type="submit"
+              >
+                Submit Your Review
+              </button>
+              <div
+                className="review-form-airplane-image-container"
+              >
+                <img
+                  alt="reviewFormAirplaneImage"
+                  className="review-form-airplane-image"
+                  src="test-file-stub"
+                />
+              </div>
+            </form>
+          </div>
+        </ReviewForm>
+      </div>
+    </div>
+  </div>
+</Airline>
+`;

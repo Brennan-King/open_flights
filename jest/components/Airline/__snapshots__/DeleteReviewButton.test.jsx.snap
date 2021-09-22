@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteReviewButton should delete a review 1`] = `
+<DeleteReviewButton
+  reviewId={0}
+  setDeleteButtonClicked={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          true,
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+>
+  <div
+    className="delete-review-button"
+    id="delete-review-button"
+    onClick={[Function]}
+  >
+    <div
+      className="x-symbol"
+    >
+      x
+    </div>
+  </div>
+</DeleteReviewButton>
+`;
+
+exports[`DeleteReviewButton should render a DeleteReviewButton component 1`] = `
+<DeleteReviewButton
+  reviewId={0}
+  setDeleteButtonClicked={[Function]}
+>
+  <div
+    className="delete-review-button"
+    id="delete-review-button"
+    onClick={[Function]}
+  >
+    <div
+      className="x-symbol"
+    >
+      x
+    </div>
+  </div>
+</DeleteReviewButton>
+`;

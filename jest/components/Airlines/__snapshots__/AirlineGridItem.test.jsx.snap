@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirlineGridItem should render an AirlineGridItem component 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "blank",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <AirlineGridItem
+    avgScore={5}
+    imageUrl="testImageUrl"
+    name="testAirlineName"
+    slug="test-airline-name"
+  >
+    <div
+      className="airline-grid-item-card"
+    >
+      <div
+        className="airline-grid-item-logo-container"
+      >
+        <img
+          alt="testAirlineName"
+          className="airline-grid-item-logo"
+          src="testImageUrl"
+        />
+      </div>
+      <div
+        className="airline-grid-item-name"
+      >
+        testAirlineName
+      </div>
+      <div
+        className="airline-score"
+      >
+        Average Rating: 5
+      </div>
+      <div
+        className="airline-grid-item-link-container"
+      >
+        <Link
+          className="airline-grid-item-link"
+          to="/airlines/test-airline-name"
+        >
+          <LinkAnchor
+            className="airline-grid-item-link"
+            href="/airlines/test-airline-name"
+            navigate={[Function]}
+          >
+            <a
+              className="airline-grid-item-link"
+              href="/airlines/test-airline-name"
+              onClick={[Function]}
+            >
+              View Airline
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+    </div>
+  </AirlineGridItem>
+</Router>
+`;
+
+exports[`AirlineGridItem should render an AirlineGridItem component with default props 1`] = `
+<Router
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "blank",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <AirlineGridItem
+    avgScore={0}
+    imageUrl=""
+    name=""
+    slug=""
+  >
+    <div
+      className="airline-grid-item-card"
+    >
+      <div
+        className="airline-grid-item-logo-container"
+      >
+        <img
+          alt=""
+          className="airline-grid-item-logo"
+          src=""
+        />
+      </div>
+      <div
+        className="airline-grid-item-name"
+      />
+      <div
+        className="airline-score"
+      >
+        Average Rating: 0
+      </div>
+      <div
+        className="airline-grid-item-link-container"
+      >
+        <Link
+          className="airline-grid-item-link"
+          to="/airlines/"
+        >
+          <LinkAnchor
+            className="airline-grid-item-link"
+            href="/airlines/"
+            navigate={[Function]}
+          >
+            <a
+              className="airline-grid-item-link"
+              href="/airlines/"
+              onClick={[Function]}
+            >
+              View Airline
+            </a>
+          </LinkAnchor>
+        </Link>
+      </div>
+    </div>
+  </AirlineGridItem>
+</Router>
+`;

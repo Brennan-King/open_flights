@@ -8,7 +8,7 @@ const propTypes = {
 };
 
 const propDefaults = {
-  reviewScore: '',
+  reviewScore: 0,
 };
 
 /**
@@ -45,5 +45,5 @@ const AirlineRating = (props) => {
 };
 
 AirlineRating.propTypes = propTypes;
-AirlineRating.propDefaults = propDefaults;
+AirlineRating.defaultProps = propDefaults;
 export default AirlineRating;

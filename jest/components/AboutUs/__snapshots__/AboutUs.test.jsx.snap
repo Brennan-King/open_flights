@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutUs should render an AboutUs component 1`] = `
+<div
+  className="about-us-container"
+>
+  <h1
+    className="about-us-header"
+  >
+    Our Mission
+  </h1>
+  <p
+    className="about-us-paragraph"
+  >
+    OpenFlight's mission is to provide reliable user reviews that are unbiased and trustworthy. We hope to provide users with feedback on major airlines to ensure they feel comfortable with the airline they select. Browse reviews for dozens of airlines accross the world.
+  </p>
+  <div>
+    <img
+      alt="aboutUsAirplane"
+      className="about-us-image"
+      src="test-file-stub"
+    />
+    <img
+      alt="aboutUsAirplane"
+      className="about-us-image"
+      src="test-file-stub"
+    />
+  </div>
+  <p
+    className="about-us-paragraph"
+  >
+    Have any experiences with a specific airline? Feel free to leave a review and share how you feel with other users.
+  </p>
+  <div>
+    <img
+      alt="aboutUsAirplane"
+      className="about-us-image"
+      src="test-file-stub"
+    />
+  </div>
+</div>
+`;

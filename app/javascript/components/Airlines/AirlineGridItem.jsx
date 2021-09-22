@@ -20,7 +20,7 @@ const propTypes = {
 const propDefaults = {
   imageUrl: '',
   name: '',
-  avgScore: '',
+  avgScore: 0,
   slug: '',
 };
 
@@ -51,5 +51,5 @@ const AirlineGridItem = (props) => {
 };
 
 AirlineGridItem.propTypes = propTypes;
-AirlineGridItem.propDefaults = propDefaults;
+AirlineGridItem.defaultProps = propDefaults;
 export default AirlineGridItem;

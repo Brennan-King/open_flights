@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirlineHeader should render an AirlineHeader component with airline attributes 1`] = `
+<AirlineHeader
+  airlineAttributes={
+    Object {
+      "avg_score": 5,
+      "image_url": "testImageUrl",
+      "name": "testAirlineName",
+      "reviews": Array [],
+    }
+  }
+>
+  <div
+    className="airline-header-container"
+  >
+    <h1>
+      <img
+        alt="testAirlineName"
+        className="airline-header-image"
+        src="testImageUrl"
+      />
+      testAirlineName
+    </h1>
+    <div>
+      <div
+        className="airline-total-reviews"
+      >
+        5 out of 5
+      </div>
+      <div
+        className="airline-rating-out-of-five"
+      >
+        0 user reviews
+      </div>
+    </div>
+  </div>
+</AirlineHeader>
+`;
+
+exports[`AirlineHeader should render an AirlineHeader component with deafult props 1`] = `
+<AirlineHeader
+  airlineAttributes={
+    Object {
+      "avg_score": 0,
+      "image_url": "",
+      "name": "",
+      "reviews": Array [],
+    }
+  }
+>
+  <div
+    className="airline-header-container"
+  >
+    <h1>
+      <img
+        alt=""
+        className="airline-header-image"
+        src=""
+      />
+    </h1>
+    <div>
+      <div
+        className="airline-total-reviews"
+      >
+        0 out of 5
+      </div>
+      <div
+        className="airline-rating-out-of-five"
+      >
+        0 user reviews
+      </div>
+    </div>
+  </div>
+</AirlineHeader>
+`;
