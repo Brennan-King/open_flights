@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Public: Model representing an airline
 class Airline < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates_presence_of :name
@@ -11,7 +12,9 @@ class Airline < ApplicationRecord
     self.slug = name.parameterize
   end
 
-  # get average score value for airline
+  # Public: Get average score value for airline
+  #
+  # Returns the average score
   def avg_score
     return 0 unless reviews.count.positive?
 
